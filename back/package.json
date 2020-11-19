@@ -1,7 +1,19 @@
 {
   "name": "Educa",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.ts",
   "author": "Felipe Alves Barboza",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "googleapis": "^64.0.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "start": "ts-node server.ts"
+  }
 }
